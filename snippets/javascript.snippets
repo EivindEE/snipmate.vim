@@ -6,19 +6,26 @@ snippet proto
 	};
 # Function
 snippet fun
-	function ${1:function_name} (${2:argument}) {
+	function ${1:function_name}(${2:argument}) {
 		${3:// body...}
 	}
 # Anonymous Function
 snippet f
-	function(${1}) {${2}};
+	function(${1}) {
+		${2}
+	};
 # if
 snippet if
-	if (${1:true}) {${2}}
+	if (${1:true}) {
+		${2}
+	}
 # if ... else
 snippet ife
-	if (${1:true}) {${2}}
-	else{${3}}
+	if (${1:true}) {
+		${2}
+	} else {
+		${3}
+	}
 # tertiary conditional
 snippet t
 	${1:/* condition */} ? ${2:a} : ${3:b}
@@ -48,6 +55,13 @@ snippet forr
 	for (var ${2:i} = ${1:Things}.length - 1; $2 >= 0; $2${3:--}) {
 		${4:$1[$2]}
 	};
+# for each
+snippet foreach
+	for (${2:el} in ${1:object}){
+		if ($1.hasOwnProperty($2)){
+			${3:// Code}
+		}
+	}
 # while (...) {...}
 snippet wh
 	while (${1:/* condition */}) {
